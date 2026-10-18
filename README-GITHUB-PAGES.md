@@ -16,3 +16,8 @@ Tämä on erillinen staattinen versio alkuperäisestä ZIP-paketista. Se ei sis�
 
 ## Testaus
 Testaa ensin `salibandy-getscore-getmatch-nopeustesti.html` ja sitten `salibandy-tulostaulu.html?match_id=953141`. Jos selaimen konsoli tai sivu ilmoittaa CORS-virheen, se on TorneoPalin rajapinnan selainkäyttöä koskeva rajoitus eikä GitHub Pages -julkaisun virhe.
+
+
+## Linkkigeneraattori
+
+Avaa `salibandy-linkkigeneraattori.html`, syötä ottelun ID ja luo linkit grafiikoihin. Työkalu toimii staattisena HTML-sivuna eikä vaadi API-avainta. Se muodostaa linkit kymmenelle ottelukohtaiselle grafiikalle.
