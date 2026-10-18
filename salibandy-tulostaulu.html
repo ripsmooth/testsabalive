@@ -135,7 +135,9 @@ function periodLabel(m){
  const extraCount=Math.max(0,Number.parseInt(m.extra_period_count,10)||0);
  if(n<=regularCount)return n+'. ERÄ';
  if(n<=regularCount+extraCount)return 'JA';
- // In a 3-period match, the period after any configured extra time is the shootout.
+ // Jos API ei ilmoita extra_period_count-arvoa, ensimmäinen varsinainen jatkoaikajakso on silti JA.
+ if(n===regularCount+1)return 'JA';
+ // Myöhempi numeerinen jakso tulkitaan rangaistuslaukauskilpailuksi; tekstimuotoinen RL käsitellään yllä.
  if(n>regularCount+extraCount)return 'RL';
  return '';
 }
